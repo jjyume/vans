@@ -1,0 +1,878 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.clearFix::after,
+.clearFix::before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@font-face {
+    font-family: '300';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '400';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '500';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '600';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '700';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '800';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '900';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "vans";
+    src: url(fonts/Higher\ Jump.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "main";
+    src: url(fonts/Shoemaker.ttf);
+    font-weight: 500;
+}
+
+#header {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.096);
+    position: relative;
+    overflow: hidden;
+}
+
+#header .logo {
+    width: 150px;
+    height: 70px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(img/logo_red.png);
+    text-indent: -9999px;
+    float: left;    
+    margin-top: 5px;
+}
+
+#header .gnb {
+    margin: 0 auto;
+    width: 600px;
+    height: 90px;
+    font-family: '500';
+}
+
+#header .gnb li a {
+    text-align: center;
+    line-height: 90px;
+    width: 150px;
+    float: left;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562);
+}
+
+#header .gnb li a::after {
+    background-color: #d5191f8e;
+    width: 150px;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: skew(-25deg);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#header .gnb li a:hover::after {
+    opacity: 1;
+}
+
+#header .side_menu {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    z-index: 0; 
+}
+
+#header .side_menu::after {
+    width: 200px;
+    height: 90px;
+    background-color: #d5191f8e;
+    position: absolute;
+    top: -25px;
+    right: -35px;
+    z-index: -1;
+    transform: skew(-25deg);
+}
+
+#header .side_menu>div {
+    background-size: cover;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#header .side_menu .search {
+    background-image: url(img/i-search.png);
+}
+
+#header .side_menu .search:hover {
+    background-image: url(img/search.png);
+}
+
+#header .side_menu .cart {
+    background-image: url(img/i-cart.png);
+}
+
+#header .side_menu .cart:hover {
+    background-image: url(img/cart.png);
+}
+
+#header .side_menu .login {
+    background-image: url(img/i-user.png);
+    margin-right: 20px;
+}
+
+#header .side_menu .login:hover {
+    background-image: url(img/user.png);
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡ섹션ㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+#section {
+    width: 100%;
+}
+
+#section .main {
+    font-family: "vans";
+    background-image: url(img/web.png);
+    background-position-y: -60px;
+    background-size: cover;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    color: #ebebeb;
+    text-align: center;
+}
+
+#section .main h1 {
+    margin-top: 90px;
+    font-size: 6rem;
+    display: none;
+}
+
+#section .main h3 {
+    margin-top: 110px;
+    font-size: 4.2rem;
+    display: none;
+}
+
+/* ㅡㅡㅡㅡㅡJUST FOR YOUㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+#section .content1 {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 53%;
+}
+
+#section .content1 h1 {
+    font-family: "main";
+    font-weight: 100;
+    font-size: 75px;
+    text-align: center;
+}
+
+#section .content1>div {
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    width: 400px;
+    height: 470px;
+    border: 1px solid rgb(207, 207, 207);
+    background-color: #f3f3f3;
+    position: relative;
+    overflow: hidden;
+}
+
+#section .content1>div::after {
+    font-family: '400';
+    background-image: url(img/label.png);
+    width: 55px;
+    height: 500px;
+    background-repeat: no-repeat;
+    position: absolute;
+    font-size: 30px;
+    top: 0px;
+    left: 0px;
+    writing-mode: vertical-rl;
+    text-indent: 7px;
+    line-height: 55px;
+    color: #1a1a1a;
+}
+
+#section .content1 .product1::after {
+    content: "NEW ARRIVAL";
+}
+
+#section .content1 .product2::after {
+    content: "ONLINE ONLY";
+}
+
+#section .content1 .product3::after {
+    content: "BEST SELLER";
+}
+
+#section .content1 .product4::after {
+    content: "NEW ARRIVAL";
+}
+
+#section .content1 .picture {
+    margin-top: 15px;
+    margin-left: 80px;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    transition: all 0.7s;
+}
+
+#section .content1 .product1 .picture {
+    background-image: url(img/p1-1.png);
+}
+
+#section .content1 .product1:hover .picture {
+    background-image: url(img/j3-2.png);
+}
+
+#section .content1 .product2 .picture {
+    background-image: url(img/p2-1.png);
+}
+
+#section .content1 .product2:hover .picture {
+    background-image: url(img/j4-2.png);
+}
+
+
+#section .content1 .product3 .picture {
+    background-image: url(img/p3-1.png);
+}
+
+#section .content1 .product3:hover .picture {
+    background-image: url(img/j2-2.png);
+}
+
+#section .content1 .product4 .picture {
+    background-image: url(img/p4-1.png);
+}
+
+#section .content1 .product4:hover .picture {
+    background-image: url(img/j1-2.png);
+}
+
+
+.picture.hovered-p1,
+.picture.hovered-p2,
+.picture.hovered-p3,
+.picture.hovered-p4 {
+    transform: scale(1.05);
+}
+
+
+
+#section .content1 h3 {
+    margin-top: 25px;
+    margin-left: 15px;
+    font-family: '500';
+    font-weight: 500;
+    font-size: 26px;
+}
+
+#section .content1 h4 {
+    margin-left: 15px;
+    margin-top: 13px;
+    color: #656565;
+    font-family: '300';
+    font-weight: 300;
+    font-size: 25px;
+}
+
+#section .content1 .color_box {
+    margin-top: 10px;
+    margin-left: 15px;
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+}
+
+#section .content1 .color_box>div {
+    width: 23px;
+    height: 23px;
+    float: left;
+    margin: 3px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.color_box {
+    display: inline-block;
+}
+
+.color_box input[type="radio"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 4px solid #00000000;
+    outline-offset: 2px;
+    outline-style: auto;
+    outline-color: #b9b9b9;
+    margin: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.color_box input[type="radio"]:checked {
+    border-color: #e04141;
+}
+
+.color_box input[type="radio"]:first-child {
+    background-color: rgb(0, 0, 0);
+}
+
+.color_box input[type="radio"]:last-child {
+    background-color: rgb(255, 255, 255);
+}
+
+.product1 .color_box input[type="radio"]:last-child {
+    background-color: rgb(228, 135, 215);
+}
+
+.color_box input[type="radio"]:first-child:checked {
+    background-color: rgb(0, 0, 0);
+    border-color: #b30707;
+}
+
+.product4 .color_box input[type="radio"]:first-child {
+    background-color: rgb(221, 18, 18);
+}
+
+.product4 .color_box input[type="radio"]:last-child {
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡWHAT YOUT STYLEㅡㅡㅡㅡㅡㅡㅡ */
+#section .content2 h1{
+    left: 50%;
+    margin-left: -550px;
+    font-family: 'main';
+    font-size: 170px;
+    color: #7a7a7a;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1;
+}
+#section .content2 {
+    margin-top: 700px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content2>div {
+    position: relative;
+    width: 19.4%;
+    height: 660px;
+    overflow: hidden;
+    border: none;
+    transform: skew(-20deg);
+    text-align: center;
+    font-family: "main";
+    font-weight: 300;
+    font-size: 75px;
+    float: left;
+}
+
+.content2 .s1 {
+    text-align: center;
+    margin-left: 50px;
+}
+
+.content2>div .button {
+    width: 203%;
+    height: 100%;
+    background: #1a1a1a;
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    mask-size: 3000% 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    -webkit-animation: ani2 1.5s steps(29) forwards;
+    animation: ani2 1s steps(29) forwards;
+    transform: skew(0deg);
+    line-height: 1050px;
+    background-repeat: no-repeat;
+    text-indent: -250px;
+}
+
+.content2>div .button:before {
+    content: "SK8-HI";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/V-Authentic.png);
+    background-position: center;
+    background-position-x: 150px;
+    background-repeat: no-repeat;
+    text-indent: -200px;
+    transform: skew(20deg);
+}
+
+.content2>.s1 .button::before {
+    content: "AUTHENTIC";
+    background-image: url(img/V-Authentic.png);
+}
+
+.content2>.s2 .button::before {
+    content: "SLIP-ON";
+    background-image: url(img/V-slipon.png);
+    background-color: #fff;
+    color: #000;
+}
+
+.content2>.s3 .button::before {
+    content: "SK8-HI";
+    background-image: url(img/V-Sk8-Hi.png);
+}
+
+.content2>.s4 .button::before {
+    content: "OLD-SKOOL";
+    background-image: url(img/V-Old-Skool.png);
+    background-color: #fff;
+    color: #000;
+}
+
+.content2>.s5 .button::before {
+    content: "ERA";
+    background-image: url(img/V-ERA.png);
+}
+
+.mas {
+    position: absolute;
+    color: #b30707;
+    width: 100%;
+    left: 80px;
+    top: 180px;
+    line-height: 690px;
+    transform: skew(20deg);
+    text-indent: -140px;
+}
+
+.content2>div .button:hover {
+    -webkit-animation: ani 1.5s steps(29) forwards;
+    animation: ani 1s steps(29) forwards;
+}
+
+#section .content2 .s1 .mas {
+    background-image: url(img/1.png);
+}
+
+#section .content2 .s2 .mas {
+    background-image: url(img/2.png);
+}
+
+#section .content2 .s3 .mas {
+    background-image: url(img/3.png);
+}
+
+#section .content2 .s4 .mas {
+    background-image: url(img/4.png);
+}
+
+#section .content2 .s5 .mas {
+    background-image: url(img/5.png);
+}
+
+
+@keyframes ani {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
+
+#section .content2{
+    background-repeat: repeat;
+    width: 100%; height: 660px;
+    background-image: url(img/aa.jpg);
+}
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡNEWSㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+#section .news h1{
+    font-family: 'main';
+    font-weight: 100;
+    font-size: 75px;
+    margin-top: 130px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+#section .news>div{
+    width: 1440px; height: 390px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    position: relative;
+}
+#section .news .n1{
+    background-image: url(img/news_1.jpg);
+    background-position-x:0px;
+    background-size: 60%;
+}
+#section .news .text_box{
+    background-color: #f3f3f3;
+    width: 860px; height: 315px;
+    position: absolute;
+    top: 35px; left: 550px;
+    z-index: 1;
+}
+#section .news .black_box{
+    background-color: #1a1a1a;
+    width: 1000px; height: 100%;
+    position: absolute;
+    right: -200px; top: 0;
+    transform: skew(-20deg);
+}
+#section .news h4{
+    font-size: 24px;
+    font-family: '300';
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+#section .news p{
+    font-size: 17px;
+    font-family: '400';
+    margin-left: 40px;
+    line-height: 28px;
+}
+#section .news .n2{
+    background-image: url(img/news_2.jpg);
+    background-size: 55%;
+    background-position-y: -40px;
+    background-position-x: -80px ;
+}
+#section .news .btn{
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 200px; height: 55px;
+    overflow: hidden;
+    position: relative;
+}
+#section .news>div:hover .red_btn{
+    width: 250px;
+}
+
+#section .news .black_btn{
+    background-color: #1a1a1a;
+    width: 200px; height: 55px;
+
+}
+#section .news .black_btn p{
+    color: #fff;
+    font-family: 'main';
+    font-size: 28px;
+    position: absolute;
+    top: 15px; left: 35px;
+    z-index: 1;
+    transition: all 0.4s;
+}
+#section .news>div:hover p{
+    color: #1a1a1a;
+}
+#section .news .red_btn{
+    background-color: #b30707;
+    margin-left: -10px;
+    width: 70px; height: 55px;
+    transform: skew(-20deg);
+    transition: all 0.7s;
+}
+#section .news .red_btn::after{
+    width: 30px; height: 30px;
+    background-image: url(img/right.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: skew(20deg);
+    position: absolute;
+    top: 13px; left: 25px;
+}
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡCUSTOMㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+#section .custom{
+    background-color: #000000;
+    width: 100%; height: 1000px;
+    color: #ffffff;
+    position: relative;
+}
+#section .custom>h1{
+    font-size: 80px;
+    font-family: 'main';
+    font-weight: 100;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    top: 50px; left: 44.3%;
+}
+
+#section .custom .box>div,
+#section .custom .photo>div{
+    width: 1220px; height: 100%;
+    background-size: 100%;
+    position: absolute;
+    right: 0; top: -50px;
+    z-index: 1;
+}
+#section .custom .mask{
+    background-image: url(img/z1.png);
+}
+#section .custom .photo>div{
+    top: 0;
+}
+#section .custom .photo .p1{
+    background-image: url(img/z2.png);
+}
+#section .custom .photo .p2{
+    background-image: url(img/z2-2.png);
+}
+#section .custom .photo .p3{
+    background-image: url(img/z2-1.png);
+}
+#section .custom .photo .p2,.p3{
+    display: none;
+}
+
+#section .custom .last_mask{
+    background-image: url(img/z3.png);
+    transition: all 0.2s;
+}
+#section .custom .title{
+    padding-top: 200px;
+    margin-left: 100px;
+    font-family: '300';
+}
+#section .custom .title h1{
+    font-size: 120px;
+    font-family: 'main';
+    font-weight: 100;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: relative;
+}
+#section .custom .title p{
+    margin-top: 250px;
+    font-size: 24px;
+    display: none;
+}
+#section .custom .title h1:hover{
+    color: #b30707;
+}
+#section .custom .title .select{
+    color: #b30707;
+
+}
+#section .custom .title .select::after{
+    width: 25px; height: 25px;
+    background-color: #b30707;
+    position: absolute;
+    left: -30px; top: 0;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡFooterㅡㅡㅡㅡㅡㅡㅡ */
+
+
+#footer {
+    width: 100%;
+    height: 340px;
+    background-image: url(img/footer_bg.png);
+    background-size: cover;
+    color: #e8e8e8;
+    position: relative;
+}
+
+#footer a{
+    display: block;
+    color: #e8e8e8;
+}
+
+#footer .logo{
+    float: left;
+    margin-top: 30px;
+    width: 180px; height: 90px;
+    margin-left: 120px;
+    text-indent: -9999px;
+    background-image: url(img/logo_red.png);
+    background-size: cover;
+    background-position: center;
+}
+#footer .left_text{
+    margin-top: 150px;
+    margin-left: 120px;
+    font-family: '300';
+    font-size: 15px;
+    line-height: 25px;
+    position: absolute;
+    left: 0; top: 0;
+}
+#footer .right_text{
+    float: right;
+    margin-right: 135px;
+}
+#footer .right_text>li{
+    float: left;
+    margin-left: 30px;
+}
+#footer .right_text>li>a{
+    font-family: '500';
+    font-size: 15px;
+    margin-top: 50px;
+}
+#footer .right_text .sub a{
+    margin-top: 10px;
+    font-size: 15px;
+}
+#footer .line{
+    margin: 0 auto;
+    width: 87%; height: 1px;
+    background-color: #e8e8e8;
+    position: absolute;
+    bottom: 90px; left: 120px;
+}
+#footer .text_bottom{
+    position: absolute;
+    bottom: 40px; left: 120px;
+}
