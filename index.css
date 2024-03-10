@@ -119,10 +119,13 @@ a {
 #header {
     width: 100%;
     height: 90px;
-    background-color: rgba(255, 255, 255, 0.096);
+    background-color: #272727cb;
     position: relative;
     overflow: hidden;
+    transition: all 0.5s;
+
 }
+
 
 #header .logo {
     width: 150px;
@@ -131,7 +134,7 @@ a {
     background-size: cover;
     background-image: url(img/logo_red.png);
     text-indent: -9999px;
-    float: left;    
+    float: left;
     margin-top: 5px;
 }
 
@@ -174,7 +177,7 @@ a {
     position: absolute;
     top: 25px;
     right: 0;
-    z-index: 0; 
+    z-index: 0;
 }
 
 #header .side_menu::after {
@@ -243,6 +246,21 @@ a {
     z-index: -1;
     color: #ebebeb;
     text-align: center;
+    /* display: none; */
+}
+
+#section .main2 {
+    background-image: url(img/2023\ Vans\ Station\ Sindang_13.jpg);
+    background-image: url(img/bg4.png);
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
 }
 
 #section .main h1 {
@@ -261,15 +279,15 @@ a {
 
 
 #section .content1 {
-    margin: 0 auto;
     width: 90%;
     margin-top: 53%;
+    margin-left: 5%;
 }
 
 #section .content1 h1 {
     font-family: "main";
     font-weight: 100;
-    font-size: 75px;
+    font-size: 7.5vmin;
     text-align: center;
 }
 
@@ -290,10 +308,10 @@ a {
     font-family: '400';
     background-image: url(img/label.png);
     width: 55px;
-    height: 500px;
+    height: 18vmax;
     background-repeat: no-repeat;
     position: absolute;
-    font-size: 30px;
+    font-size: 3vmin;
     top: 0px;
     left: 0px;
     writing-mode: vertical-rl;
@@ -375,7 +393,7 @@ a {
     margin-left: 15px;
     font-family: '500';
     font-weight: 500;
-    font-size: 26px;
+    font-size: 2.7vmin;
 }
 
 #section .content1 h4 {
@@ -384,7 +402,7 @@ a {
     color: #656565;
     font-family: '300';
     font-weight: 300;
-    font-size: 25px;
+    font-size: 2.7vmin;
 }
 
 #section .content1 .color_box {
@@ -392,6 +410,7 @@ a {
     margin-left: 15px;
     position: absolute;
     right: 15px;
+    bottom: 15px;
     z-index: 1;
 }
 
@@ -456,7 +475,7 @@ a {
 
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡWHAT YOUT STYLEㅡㅡㅡㅡㅡㅡㅡ */
-#section .content2 h1{
+#section .content2 h1 {
     left: 50%;
     margin-left: -550px;
     font-family: 'main';
@@ -466,6 +485,7 @@ a {
     position: absolute;
     z-index: 1;
 }
+
 #section .content2 {
     margin-top: 700px;
     width: 100%;
@@ -552,7 +572,7 @@ a {
     background-image: url(img/V-ERA.png);
 }
 
-.mas {
+.content2 .mas {
     position: absolute;
     color: #b30707;
     width: 100%;
@@ -613,27 +633,153 @@ a {
     }
 }
 
-#section .content2{
+#section .content2 {
     background-repeat: repeat;
-    width: 100%; height: 660px;
+    width: 100%;
+    height: 660px;
     background-image: url(img/aa.jpg);
 }
 
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡcontent3ㅡㅡㅡㅡㅡㅡㅡㅡ */
+#section .content3 {
+    text-align: center;
+    margin-top: 50%;
+    width: 100%;
+    padding-bottom: 00px;
+    background-image: url(img/aa.jpg);
+    background-size: cover;
+    font-family: 'main';
+    font-size: 5vh;
+    line-height: 180px;
+    display: none;
+}
+
+#section .content3 h1 {
+    font-size: 7.5vmin;
+    font-weight: 300;
+}
+
+#section .content3>div {
+    margin: 0 auto;
+    /* background-color: #656565; */
+    width: 100%;
+    height: 180px;
+    position: relative;
+
+}
+
+.content3>div .button {
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    mask-size: 3000% 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    -webkit-animation: ani2 1.5s steps(29) forwards;
+    animation: ani2 1s steps(29) forwards;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-shadow: 0px 0px 5px #00000062;
+}
+
+.content3>div .button::before {
+    content: "SK8-HI";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.content3>.s1 .button::before {
+    content: "AUTHENTIC";
+    background-image: url(img/V-Authentic.png);
+}
+
+.content3>.s2 .button::before {
+    content: "SLIP-ON";
+    background-image: url(img/V-slipon.png);
+    background-color: #ffffff;
+    color: #000;
+    text-shadow: 0px 0px 5px #0000002f;
+}
+
+.content3>.s3 .button::before {
+    content: "SK8-HI";
+    background-image: url(img/V-Sk8-Hi.png);
+}
+
+.content3>.s4 .button::before {
+    content: "OLD-SKOOL";
+    background-image: url(img/V-Old-Skool.png);
+    background-color: #ffffff;
+    color: #000;
+    text-shadow: 0px 0px 5px #0000002f;
+}
+
+.content3>.s5 .button::before {
+    content: "ERA";
+    background-image: url(img/V-ERA.png);
+}
+
+#section .content3 .mas {
+    position: absolute;
+    color: #b30707c2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    margin-left: 0px;
+    top: 0px;
+    background-position: center;
+    background-size: contain;
+}
+
+.content3>div .button:hover {
+    -webkit-animation: ani 1.5s steps(29) forwards;
+    animation: ani 1s steps(29) forwards;
+}
+
+#section .content3 .s1 .mas {
+    background-image: url(img/1.png);
+}
+
+#section .content3 .s2 .mas {
+    background-image: url(img/2.png);
+}
+
+#section .content3 .s3 .mas {
+    background-image: url(img/3.png);
+}
+
+#section .content3 .s4 .mas {
+    background-image: url(img/4.png);
+}
+
+#section .content3 .s5 .mas {
+    background-image: url(img/5.png);
+}
 
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡNEWSㅡㅡㅡㅡㅡㅡㅡㅡ */
 
-#section .news h1{
+#section .news h1 {
     font-family: 'main';
     font-weight: 100;
-    font-size: 75px;
+    font-size: 7.5vmin;
     margin-top: 130px;
     margin-bottom: 80px;
     text-align: center;
 }
 
-#section .news>div{
-    width: 1440px; height: 390px;
+#section .news>div {
+    width: 1440px;
+    height: 390px;
     margin: 0 auto;
     margin-bottom: 30px;
     background-color: #000;
@@ -644,172 +790,254 @@ a {
     transition: all 0.2s;
     position: relative;
 }
-#section .news .n1{
+
+#section .news .n1 {
     background-image: url(img/news_1.jpg);
-    background-position-x:0px;
+    background-position-x: 0px;
     background-size: 60%;
 }
-#section .news .text_box{
+
+#section .news .text_box {
     background-color: #f3f3f3;
-    width: 860px; height: 315px;
+    width: 860px;
+    height: 315px;
     position: absolute;
-    top: 35px; left: 550px;
+    top: 35px;
+    left: 550px;
     z-index: 1;
 }
-#section .news .black_box{
+
+#section .news .black_box {
     background-color: #1a1a1a;
-    width: 1000px; height: 100%;
+    width: 1000px;
+    height: 100%;
     position: absolute;
-    right: -200px; top: 0;
+    right: -200px;
+    top: 0;
     transform: skew(-20deg);
 }
-#section .news h4{
+
+#section .news h4 {
     font-size: 24px;
     font-family: '300';
     margin-left: 40px;
+    margin-right: 40px;
     margin-top: 40px;
     margin-bottom: 20px;
 }
-#section .news p{
+
+#section .news .text_box>p {
+    margin-right: 40px;
+}
+
+#section .news p {
     font-size: 17px;
     font-family: '400';
     margin-left: 40px;
     line-height: 28px;
 }
-#section .news .n2{
+
+#section .news .n2 {
     background-image: url(img/news_2.jpg);
     background-size: 55%;
     background-position-y: -40px;
-    background-position-x: -80px ;
+    background-position-x: -80px;
 }
-#section .news .btn{
+
+#section .news .btn {
     cursor: pointer;
     margin-top: 30px;
     margin-left: 40px;
-    width: 200px; height: 55px;
+    width: 200px;
+    height: 55px;
     overflow: hidden;
     position: relative;
 }
-#section .news>div:hover .red_btn{
+
+#section .news>div:hover .red_btn {
     width: 250px;
 }
 
-#section .news .black_btn{
+#section .news .black_btn {
     background-color: #1a1a1a;
-    width: 200px; height: 55px;
+    width: 200px;
+    height: 55px;
 
 }
-#section .news .black_btn p{
+
+#section .news .black_btn p {
     color: #fff;
     font-family: 'main';
     font-size: 28px;
     position: absolute;
-    top: 15px; left: 35px;
+    top: 15px;
+    left: 35px;
     z-index: 1;
     transition: all 0.4s;
 }
-#section .news>div:hover p{
+
+#section .news>div:hover p {
     color: #1a1a1a;
 }
-#section .news .red_btn{
+
+#section .news .red_btn {
     background-color: #b30707;
     margin-left: -10px;
-    width: 70px; height: 55px;
+    width: 70px;
+    height: 55px;
     transform: skew(-20deg);
     transition: all 0.7s;
 }
-#section .news .red_btn::after{
-    width: 30px; height: 30px;
+
+#section .news .red_btn::after {
+    width: 30px;
+    height: 30px;
     background-image: url(img/right.png);
     background-size: cover;
     background-repeat: no-repeat;
     transform: skew(20deg);
     position: absolute;
-    top: 13px; left: 25px;
+    top: 13px;
+    left: 25px;
 }
 
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡCUSTOMㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 
 
-#section .custom{
+#section .custom {
     background-color: #000000;
-    width: 100%; height: 1000px;
+    height: 0;
+    width: 100%;
+    padding-bottom: 56.25%;
     color: #ffffff;
     position: relative;
 }
-#section .custom>h1{
-    font-size: 80px;
+
+#section .custom>h1 {
+    font-size: 7.5vmin;
     font-family: 'main';
     font-weight: 100;
     text-align: center;
-    position: absolute;
     z-index: 2;
-    top: 50px; left: 44.3%;
+    padding-top: 3%;
 }
-
-#section .custom .box>div,
-#section .custom .photo>div{
-    width: 1220px; height: 100%;
+#section .custom .box {
+    margin-top: 0px;
+    width: 100%; height: 100%;
+    /* background-color: #b30707; */
+    position: absolute;
+    z-index: 0;
+}
+#section .custom .box .mask {
+    margin-top: 5%;
+    width: 55%;
+    height: 100%;
     background-size: 100%;
     position: absolute;
-    right: 0; top: -50px;
+    right: 0px;
+    top: 0px;
     z-index: 1;
 }
-#section .custom .mask{
+
+#section .custom .box .photo {
+    margin-top: 5%;
+    width: 55%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+#section .custom .box .last_mask {
+    margin-top: 5%;
+    width: 55%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+#section .custom .photo>div {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    right: 0px;
+    top: -50px;
+    z-index: 1;
+}
+
+#section .custom .mask {
     background-image: url(img/z1.png);
 }
-#section .custom .photo>div{
+
+#section .custom .photo>div {
     top: 0;
 }
-#section .custom .photo .p1{
+
+#section .custom .photo .p1 {
     background-image: url(img/z2.png);
 }
-#section .custom .photo .p2{
+
+#section .custom .photo .p2 {
     background-image: url(img/z2-2.png);
 }
-#section .custom .photo .p3{
+
+#section .custom .photo .p3 {
     background-image: url(img/z2-1.png);
 }
-#section .custom .photo .p2,.p3{
+
+#section .custom .photo .p2,
+.p3 {
     display: none;
 }
 
-#section .custom .last_mask{
+#section .custom .last_mask {
     background-image: url(img/z3.png);
     transition: all 0.2s;
 }
-#section .custom .title{
-    padding-top: 200px;
-    margin-left: 100px;
+
+#section .custom .title {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 7%;
     font-family: '300';
 }
-#section .custom .title h1{
+
+#section .custom .title h1 {
     font-size: 120px;
     font-family: 'main';
     font-weight: 100;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    line-height: 130%;
     cursor: pointer;
     transition: all 0.5s;
     position: relative;
 }
-#section .custom .title p{
-    margin-top: 250px;
-    font-size: 24px;
-    display: none;
-}
-#section .custom .title h1:hover{
+
+#section .custom .title h1:hover {
     color: #b30707;
 }
-#section .custom .title .select{
+
+#section .custom .title .select {
     color: #b30707;
 
 }
-#section .custom .title .select::after{
-    width: 25px; height: 25px;
+
+#section .custom .title .select::after {
+    width: 1.9%;
+    height: 27px;
     background-color: #b30707;
     position: absolute;
-    left: -30px; top: 0;
+    left: -30px;
+    top: 0;
+    z-index: 10;
 }
 
 /* ㅡㅡㅡㅡㅡㅡㅡFooterㅡㅡㅡㅡㅡㅡㅡ */
@@ -824,55 +1052,415 @@ a {
     position: relative;
 }
 
-#footer a{
+#footer a {
     display: block;
     color: #e8e8e8;
 }
 
-#footer .logo{
+#footer .logo {
     float: left;
     margin-top: 30px;
-    width: 180px; height: 90px;
-    margin-left: 120px;
+    width: 180px;
+    height: 90px;
+    margin-left: 10%;
     text-indent: -9999px;
     background-image: url(img/logo_red.png);
     background-size: cover;
     background-position: center;
 }
-#footer .left_text{
+
+#footer .left_text {
     margin-top: 150px;
-    margin-left: 120px;
+    margin-left: 10%;
     font-family: '300';
     font-size: 15px;
     line-height: 25px;
     position: absolute;
-    left: 0; top: 0;
+    left: 0;
+    top: 0;
+    margin-right: 6%;
 }
-#footer .right_text{
+
+#footer .right_text {
     float: right;
     margin-right: 135px;
 }
-#footer .right_text>li{
+
+#footer .right_text>li {
     float: left;
     margin-left: 30px;
 }
-#footer .right_text>li>a{
+
+#footer .right_text>li>a {
     font-family: '500';
     font-size: 15px;
     margin-top: 50px;
 }
-#footer .right_text .sub a{
+
+#footer .right_text .sub a {
     margin-top: 10px;
     font-size: 15px;
 }
-#footer .line{
+
+#footer .line {
     margin: 0 auto;
-    width: 87%; height: 1px;
+    width: 87%;
+    height: 1px;
     background-color: #e8e8e8;
     position: absolute;
-    bottom: 90px; left: 120px;
+    bottom: 90px;
+    left: 6%;
 }
-#footer .text_bottom{
+
+#footer .text_bottom {
     position: absolute;
-    bottom: 40px; left: 120px;
+    bottom: 40px;
+    left: 10%;
+    font-family: '300';
+}
+
+#footer .m_text {
+    display: none;
+    font-family: '300';
+}
+
+
+
+
+@media all and (min-width:900px) and (max-width:1900px) {
+    #section .content1 {
+        /* background-color: #656565; */
+        width: 95%;
+        height: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30%;
+    }
+
+    #section .content1>div {
+        margin-left: 8%;
+        width: 40%;
+        height: 0;
+        padding-bottom: 30%;
+    }
+
+    #section .content1 .product2,
+    #section .content1 .product4 {
+        margin-right: 8%;
+        margin-left: 0%;
+        float: right;
+    }
+
+    #section .content1 .picture {
+        background-size: cover;
+        background-position: center;
+        height: 0;
+        width: 50%;
+        padding-bottom: 50%;
+        margin: 0 auto;
+    }
+
+    #section .content3 {
+        padding-bottom: 500px;
+    }
+
+    #section .content3>div {
+        float: left;
+        width: 50%;
+        height: 250px;
+    }
+
+    #section .content3 .s5 {
+        display: none;
+    }
+
+    .content3>.s3 .button::before {
+        background-color: #fff;
+        color: #ffffff;
+        text-shadow: 0px 0px 5px #000000a8;
+    }
+
+    #section .content3>.s4 .button::before {
+        color: #ffffff;
+        background-color: #1a1a1a;
+        text-shadow: 0px 0px 5px #000000a8;
+    }
+
+}
+
+@media all and (max-width:1900px) {
+    #section .content2 {
+        display: none;
+    }
+
+    #section .content3 {
+        display: block;
+    }
+
+    #section .custom>h1 {
+        position: static;
+    }
+
+    #section .custom .title {
+        padding-top: 100px;
+    }
+
+    #section .custom .title h1 {
+        font-size: 5.7vw;
+    }
+}
+
+@media (max-width:1280px) {
+    #header {
+        background-color: #272727cb;
+    }
+
+    #header .logo {
+        width: 110px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        margin-left: -50px;
+    }
+
+    #header .gnb {
+        display: none;
+    }
+
+    #header .side_menu {
+        display: none;
+    }
+
+    #header .m_search {
+        width: 30px;
+        height: 30px;
+        background-image: url(img/search-red.png);
+        position: absolute;
+        background-size: cover;
+        top: 25px;
+        right: 30px;
+        z-index: 0;
+        cursor: pointer;
+    }
+
+    #header .m_menu {
+        width: 30px;
+        height: 30px;
+        background-image: url(img/menu.png);
+        background-size: cover;
+        position: absolute;
+        top: 25px;
+        left: 30px;
+        z-index: 0;
+        cursor: pointer;
+    }
+
+    #section .custom .title>div {
+        float: left;
+        width: 30%;
+        height: 50px;
+        font-size: 2vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    #section .custom .title h1 {
+        float: left;
+        display: inline;
+        font-size: 3.5vmax;
+        margin-top: -150px;
+        left: 0;
+        text-align: center;
+        z-index: 10;
+    }
+
+    #section .custom {
+        padding-bottom: 70%;
+    }
+
+    #section .custom .mask,
+    #section .custom .photo,
+    #section .custom .last_mask {
+        left: 23%;
+    }
+    #section .custom .box{
+        margin-top: 5%;
+        width: 100%; height: 100%;
+    }
+    #section .custom .title .select::after{
+        width: 5%; height: 5%;
+        left: -10px;
+    }
+}
+
+
+/* ㅡㅡㅡㅡㅡㅡ푸터 디스플레이 구조 변경 , 뉴스 레이아웃 변경ㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+@media all and (min-width:0px) and (max-width:1399px) {
+    #footer .right_text {
+        display: none;
+    }
+
+    #footer {
+        text-align: center;
+    }
+
+    #footer .logo {
+        width: 100%;
+        height: 40%;
+        background-size: contain;
+        margin: 0 auto;
+        float: left;
+    }
+
+    #footer .left_text {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #footer .text_bottom {
+        width: 80%;
+        height: 0px;
+        position: relative;
+        text-align: center;
+        left: 0%;
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+
+    #footer .info {
+        width: 100%;
+        height: 0;
+        margin: 0 auto;
+        padding-top: 0px;
+    }
+
+    #section .news .text_box {
+        margin: 0 auto;
+        width: 70%;
+        position: absolute;
+        left: 15%;
+        z-index: 10;
+    }
+
+    #section .news .text_box>p {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        white-space: normal;
+        line-height: 1.8;
+        height: 5.4em;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+    }
+
+    .news br {
+        display: none;
+    }
+
+    #section .news>div {
+        width: 100%;
+    }
+
+    #section .news .n1,
+    #section .news .n2 {
+        background-size: cover;
+        background-position-x: 0px;
+        background-position-y: 0px;
+    }
+
+    #section .news .black_box {
+        width: 70%;
+        z-index: 0;
+    }
+}
+
+
+@media all and (max-width:900px) {
+    #section .content1>div {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #section .content1>div::after {
+        height: 100%;
+        font-size: 3vmax;
+    }
+
+    #section .content1 h3,
+    #section .content1 h4 {
+        font-size: 3vmax;
+    }
+
+    #section .content3 {
+        margin-top: 10%;
+    }
+
+    #section .content1 .product4 {
+        display: none;
+    }
+
+}
+
+/* ㅡㅡㅡㅡㅡㅡ푸터 디스플레이 추가ㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+@media all and (max-width:730px) {
+    #footer{
+        margin-top: -100px;
+    }
+    #footer .sns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer .sns>div {
+        margin-top: 20px;
+        width: 35px;
+        height: 35px;
+        background-size: cover;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #footer .sns .youtube {
+        background-image: url(img/youtube.png);
+    }
+
+    #footer .sns .insta {
+        background-image: url(img/instagram.png);
+    }
+
+    #footer .sns .twitter {
+        background-image: url(img/twitter.png);
+    }
+
+    #footer .left_text {
+        display: none
+    }
+
+    #footer .info {
+        position: absolute;
+        bottom: -300px;
+    }
+
+    #footer .m_text {
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer .m_text>div {
+        margin-top: 25px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #footer .line {
+        bottom: 110px;
+    }
 }
