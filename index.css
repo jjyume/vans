@@ -1257,7 +1257,7 @@ a {
         cursor: pointer;
     }
 
-    #section .custom .title>div {
+    /* #section .custom .title>div {
         float: left;
         width: 30%;
         height: 50px;
@@ -1275,13 +1275,15 @@ a {
         left: 0;
         text-align: center;
         z-index: 10;
+    } */
+    #section .custom .title{
+        margin-top: -30px;
     }
-
     #section .custom {
         padding-bottom: 70%;
     }
 
-    #section .custom .mask,
+    /* #section .custom .mask,
     #section .custom .photo,
     #section .custom .last_mask {
         left: 23%;
@@ -1293,7 +1295,7 @@ a {
     #section .custom .title .select::after{
         width: 5%; height: 5%;
         left: -10px;
-    }
+    } */
 }
 
 
@@ -1382,8 +1384,8 @@ a {
 @media all and (max-width:900px) {
     #section .content1>div {
         float: none;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
+        margin-top: 20px;
     }
 
     #section .content1>div::after {
