@@ -812,7 +812,7 @@ a {
     width: 1000px;
     height: 100%;
     position: absolute;
-    right: -200px;
+    right: -300px;
     top: 0;
     transform: skew(-20deg);
 }
@@ -1003,7 +1003,7 @@ a {
 }
 
 #section .custom .title {
-    width: 100%;
+    width: 93%;
     height: 100%;
     margin-top: 5%;
     margin-left: 7%;
@@ -1031,7 +1031,7 @@ a {
 }
 
 #section .custom .title .select::after {
-    width: 1.9%;
+    width: 1.5%;
     height: 27px;
     background-color: #b30707;
     position: absolute;
