@@ -1139,15 +1139,16 @@ a {
 
     #section .content1>div {
         margin-left: 0%;
-        width: 40%;
+        width: 49%;
         height: 0;
         margin: 0 auto;
         padding-bottom: 30%;
+        margin-top: 20px;
     }
 
     #section .content1 .product2,
     #section .content1 .product4 {
-        margin-right: 8%;
+        margin-right: 0%;
         margin-left: 0%;
         float: right;
     }
@@ -1386,6 +1387,8 @@ a {
         float: none;
         margin: 0 auto;
         margin-top: 20px;
+        width: 100%;
+
     }
 
     #section .content1>div::after {
