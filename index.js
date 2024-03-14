@@ -19,6 +19,22 @@ $(document).ready(function () {
             $(this).addClass('select');
         });
     });
+    let main = $("#section .main");
+    let main2 = $("#section .main2");
+
+        main.css("opacity", 1);
+
+        function toggleFade() {
+            if (main.css("opacity") === "1") {
+                main.animate({opacity: 0}, 1000);
+                main2.animate({opacity: 1}, 1000);
+            } else {
+                main.animate({opacity: 1}, 1000);
+                main2.animate({opacity: 0}, 1000);
+            }
+        }
+
+        setInterval(toggleFade, 3000);
 });
 document.addEventListener('DOMContentLoaded', function () {
     function setupRadioHandler(productSelector, radioName, imgPrefix, hoverClass) {
