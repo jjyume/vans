@@ -1381,7 +1381,9 @@ a {
     #header{
         background-color: #2f2f2f;
     }
-    #section .main,
+    #section .main{
+        padding-top: 4%;
+    }
     #section .main2{
         padding-top: 4%;
     }
@@ -1414,10 +1416,17 @@ a {
 /* ㅡㅡㅡㅡㅡㅡ푸터 디스플레이 추가ㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 @media all and (max-width:730px) {
     #section .main{
-        margin-top: 0px;
+        margin-top: 5cap;
     }
     #section .main2{
-        margin-top: 70px;
+        margin-top: 50px;
+    }
+    #section .content1 h1{
+        padding-top: 20px;
+    }
+    #section .custom .title h1{
+        margin-top: -140px;
+        font-size: 4vw;
     }
     #footer{
         margin-top: -100px;
@@ -1427,7 +1436,6 @@ a {
         display: flex;
         justify-content: center;
     }
-
     #footer .sns>div {
         margin-top: 20px;
         width: 35px;
