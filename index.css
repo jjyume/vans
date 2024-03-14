@@ -911,6 +911,7 @@ a {
     padding-bottom: 56.25%;
     color: #ffffff;
     position: relative;
+    overflow: hidden;
 }
 
 #section .custom>h1 {
