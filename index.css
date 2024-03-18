@@ -278,12 +278,10 @@ a {
 
 
 #section .content1 {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 53%;
-
 }
-
 #section .content1 h1 {
     font-family: "main";
     font-weight: 100;
